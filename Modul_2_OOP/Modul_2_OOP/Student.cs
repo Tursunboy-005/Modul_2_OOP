@@ -8,11 +8,11 @@ namespace Modul_2_OOP
 {
     internal class Student
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Lastname { get; set; }
-        public int Group { get; set; }
-        public int Grade { get; set; }
+        public int Id { get; private set; }
+        public string Name { get; private set; }
+        public string Lastname { get; private set; }
+        public int Group { get; private set; }
+        public int Grade { get; private set; }
 
         public Student(int id, string name, string lastname, int group, int grade)
         {
@@ -30,6 +30,7 @@ namespace Modul_2_OOP
             Name = name;
             Lastname = lastname;
         }
+
         public Student()
         {
             Id = 12;
@@ -37,6 +38,21 @@ namespace Modul_2_OOP
             Lastname = "Raximjonov";
             Group = 1;
             Grade = 5;
+        }
+
+        public void SetExamResult(int a)
+        {
+            if(a <= 0) 
+            {
+                Console.WriteLine("Grade must be great than !0 ");
+                return;
+            }
+            Grade = Grade;
+        }
+
+        public void DisplayResult()
+        {
+            Console.WriteLine($"ID - {Id}, Name - {Name}, Lastname - {Lastname}, Group - {Group}, Grade - {Grade}");
         }
     }
 }

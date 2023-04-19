@@ -12,14 +12,10 @@ namespace Modul_2_OOP
         {
            Student student = new Student(12,"Tursunboy", "Raximjonov",2,5);
 
-            Console.WriteLine(" ------------- 1  -------------------");
+            Console.WriteLine(" --------------------- 1  -------------------");
 
-            Console.WriteLine(student.Id);
-            Console.WriteLine(student.Name);
-            Console.WriteLine(student.Lastname);
-            Console.WriteLine(student.Group);
-            Console.WriteLine(student.Grade);
-
+            student.DisplayResult();
+            
             Console.WriteLine(" ----------------------- 2 ------------------");
 
             Student student1 = new Student();
